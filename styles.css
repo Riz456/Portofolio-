@@ -404,42 +404,65 @@ section.animated h2::after {
 
 .projects {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
+  padding: 2rem 1rem;
 }
 
-.project-card {
+@media (min-width: 640px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+a.project-card {
   background: #1e293b;
   padding: 1.5rem;
-  border-radius: 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: inherit;
   transition: all 0.4s ease;
   opacity: 0;
   transform: translateY(30px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.projects.animated .project-card {
+.projects.animated a.project-card {
   opacity: 1;
   transform: translateY(0);
 }
 
-.project-card:hover {
+a.project-card:hover {
   background: #334155;
-  transform: translateY(-5px) !important;
+  transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.project-card h3 {
+a.project-card h3 {
   color: #38bdf8;
   margin-bottom: 0.5rem;
   transition: color 0.3s ease;
 }
 
-.project-card:hover h3 {
+a.project-card:hover h3 {
   color: #7dd3fc;
 }
 
-.project-card:nth-child(1) { transition-delay: 0.2s; }
-.project-card:nth-child(2) { transition-delay: 0.4s; }
+/* Animasi delay tiap kartu */
+a.project-card:nth-child(1) { transition-delay: 0.2s; }
+a.project-card:nth-child(2) { transition-delay: 0.4s; }
+a.project-card:nth-child(3) { transition-delay: 0.6s; }
+a.project-card:nth-child(4) { transition-delay: 0.8s; }
+a.project-card:nth-child(5) { transition-delay: 1s; }
 
  /* Platform Section */
     .platforms {
@@ -484,6 +507,195 @@ section.animated h2::after {
   opacity: 1;
   transform: translateY(0);
   transition: all 0.8s ease-out;
+}
+
+/* Motivasi Section */
+.motivasi-section {
+  padding: 4rem 1rem;
+  background-color: #0f172a;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.motivasi-section.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.motivasi-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.motivasi-slider {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 2rem 0.5rem;
+  margin: 0 -0.5rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.motivasi-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.motivasi-slider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.motivasi-card {
+  min-width: 90%;
+  max-width: 90%;
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 1.2rem;
+  scroll-snap-align: center;
+  flex: 0 0 auto;
+  border: 1px solid #334155;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.motivasi-card:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.1);
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+
+.author {
+  display: block;
+  color: #38bdf8;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.slider-btn {
+  background: rgba(56, 189, 248, 0.2);
+  border: 2px solid #38bdf8;
+  color: #f8fafc;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.slider-btn:hover {
+  background: #38bdf8;
+  transform: scale(1.1);
+}
+
+.scroll-indicator {
+  height: 4px;
+  background: #334155;
+  flex-grow: 1;
+  max-width: 300px;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 25%;
+  background: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .motivasi-card {
+    min-width: calc(50% - 2rem);
+    max-width: calc(50% - 2rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .motivasi-card {
+    min-width: calc(33.333% - 2rem);
+    max-width: calc(33.333% - 2rem);
+  }
+
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .prev-btn {
+    left: 0;
+  }
+
+  .next-btn {
+    right: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .motivasi-card {
+    min-width: calc(33.333% - 2rem);
+    max-width: calc(33.333% - 2rem);
+  }
+}
+
+/* Tambahan untuk layar kecil banget */
+@media (max-width: 480px) {
+  .motivasi-card {
+    padding: 1rem;
+  }
+
+  .quote {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .author {
+    font-size: 0.85rem;
+  }
+
+  .slider-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
 }
 
 footer {
