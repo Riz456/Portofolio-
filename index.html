@@ -5,30 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rizky Mustafa Afrino - Portofolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="website icon" type="png" href="riz.png">
 </head>
 <body>
+  <div id="preloader">
+  <div class="logo-box">
+    <img src="riz_.png" alt="Logo" class="logo-img" />
+    <h1 class="loading-text">Riz_dEV</h1>
+  </div>
+</div>
   <header>
   <div class="logo">Rizky Mustafa Afrino</div>
-  <button class="hamburger" aria-label="Menu" onclick="toggleMenu()" aria-expanded="false">
-    <i class="fas fa-bars"></i>
-  </button>
-  <div class="nav-overlay" id="navOverlay"></div>
-  <nav class="nav-links" id="navLinks">
-    <a href="#about" onclick="closeMenu()">Tentang</a>
-    <a href="#skills" onclick="closeMenu()">Keahlian</a>
-    <a href="#projects" onclick="closeMenu()">Projek</a>
-    <a href="#platforms" onclick="closeMenu()">platfrom</a>
-  </nav>
 </header>
   
   <section class="hero">
-    <img src="foto-profil.jpg" alt="profil saya" class="float">
+    <img src="pantai.jpg" alt="profil saya" class="float">
     <h1>Halo, saya Rizky Mustafa Afrino</h1>
-    <p>Saya adalah seorang siswa yang suka bereksperimen dan mebuat website berguna dan bermanfaat untuk orang lain.</p>
+    <p>seorang siswa yang suka bereksperimen dalam menciptakan website. Fokus saya adalah membuat website yang bermanfaat dan memiliki dampak positif untuk orang banyak. </p>
     <div class="social-icons">
-      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="404.html"><i class="fab fa-github"></i></a>
       <a href="https://www.instagram.com/riz_456d/profilecard/?igsh=MXJteXBrNHBub3FrNQ=="><i class="fab fa-instagram"></i></a>
       <a href="https://www.tiktok.com/@riz_m.af?_t=ZS-8vO7VeoGCGN&_r=1"><i class="fab fa-tiktok"></i></a>
     </div>
@@ -36,7 +34,8 @@
   
   <section id="about">
     <h2>Tentang Saya</h2>
-    <p>Saya siswa dari SMP NEGERI 2 KALIWUNGU yang masih belajar dalam membuat website interaktif menggunakan HTML, CSS, JavaScript dan PHP. Saya juga tertarik pada UI/UX dan desain yang responsif. Untuk saat ini belum ada website yang saya buat menggunakan bahasa pemrograman PHP karena saya masih belajar untuk menguasai PHP.</p>
+    <p>Saya seorang siswa dari salah satu SMP di Kabupaten Semarang yang sedang mendalami pembuatan website interaktif menggunakan HTML, CSS, JavaScript, dan PHP. Selain itu, saya sangat tertarik pada dunia UI/UX serta desain responsif, karena menurut saya desain yang menarik dan ramah pengguna sangat penting dalam membuat website. Untuk saat ini, saya memang belum sempat membuat website menggunakan PHP karena saya masih terus belajar dan berusaha memahami konsep serta penerapan bahasa tersebut agar bisa lebih mahir di masa mendatang. 
+</p>
   </section>
   
   <section id="skills">
@@ -99,20 +98,37 @@
         <h3>Acode</h3>
         <p>Aplikasi editor untuk android.</p>
       </div>
+    
+     <div class="platform-card">
+        <div class="platform-icon">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <h3>Vercell</h3>
+        <p>Tempat Menghosting Website secara free.</p>
+      </div>
     </div>
   </section>
-  
-  <section id="slider">
-   <h2>Contoh Karya Desain</h2>
-   <div class="slider-container">
+
+<section id="slider">
+  <h2>Karya Di Platform</h2>
+  <div class="slider-container">
     <div class="slider">
-      <img src="foto-profil.jpg" alt="dokumen-penting">
-      <img src="image.jpg" alt="dokumen-penting">
-      <img src="pantai.jpg" alt="dokumen-penting">
-      <!-- Tambah gambar sesuai kebutuhan -->
+      <a href="https://www.canva.com/design/DAGTJn49APc/pW6LlYNl15_dZqZ0tWzYBw/edit" target="_blank" rel="noopener">
+        <img data-src="canva-reel.png" alt="Desain Reel Canva" class="slide-img">
+      </a>
+      <a href="https://www.canva.com/design/DAGjDnWRZak/1ZaVSple3_xfMC3HSpr4rg/edit" target="_blank" rel="noopener">
+        <img data-src="canva-poster.png" alt="Poster Canva" class="slide-img">
+      </a>
+      <a href="halaman2.html">
+        <img data-src="akun_belajar.png" alt="Akun Belajar" class="slide-img">
+      </a>
+      <a href="kontak.html">
+        <img data-src="Riz_d6v_20250415_080516_0000.png" alt="Desain Grafis" class="slide-img">
+      </a>
     </div>
   </div>
 </section>
+ 
 
 <section class="motivasi-section" id="motivasi">
   <h2>Kata-Kata Inspiratif</h2>
@@ -121,6 +137,12 @@
       <div class="motivasi-card">
         <i class="fas fa-quote-left"></i>
         <p class="quote">"Belajar bukan tentang menjadi yang terbaik, tapi terus bertumbuh jadi lebih baik dari sebelumnya."</p>
+         <i class="fas fa-quote-right"></i>
+        <strong class="author">– Developer</strong>
+      </div>
+      <div class="motivasi-card">
+       <i class="fas fa-quote-left"></i>
+        <p class="quote">Kegagalan bukan akhir dari dunia, tapi bagian dari proses. Dari situ, kita belajar, tumbuh, dan jadi lebih tangguh. Nggak apa-apa jatuh, yang penting terus bangkit dan jangan berhenti mencoba.</p>
          <i class="fas fa-quote-right"></i>
         <strong class="author">– Developer</strong>
       </div>
@@ -170,9 +192,53 @@
     </div>
   </div>
 </section>
-  <footer>
-    &copy; 2021-2025 Rizky Mustafa Afrino. Dibuat dengan semangat dan cinta ngoding.
-  </footer>
+
+<!-- Popup Aduan -->
+<div class="popup" id="popupAduan" style="display: none;">
+  <div class="popup-content" id="popupContent">
+   <h2 class="popup-title">Kirim Aduan</h2>
+    <textarea id="aduanText" placeholder="Tulis pendapat dan aduanmu di sini ya..."></textarea>
+    <div class="popup-buttons">
+      <button onclick="kirimAduan()">Kirim</button>
+      <button onclick="sembunyikanPopup()">Batal</button>
+    </div>
+  </div>
+</div>
+
+ <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="#about">Tentang</a></li>
+                        <li><a href="#skills">Keahlian</a></li>
+                        <li><a href="#projects">Projek</a></li>
+                        <li><a href="#platforms">platfrom Dan Alat</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Alamat</h3>
+                    <ul>
+                        <li>GHJQ+XWV Payungan, Kabupaten Semarang, Jawa Tengah</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontak</h3>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/Rizky Mustafa Afrino"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/rizk45318"><i class="fab fa-twitter"></i></a>
+                         <a href="https://www.instagram.com/riz_456d/profilecard/?igsh=MXJteXBrNHBub3FrNQ=="><i class="fab fa-instagram"></i></a>
+                         <a href="https://wa.me/6282326744030"><i class="fab fa-whatsapp"></i></a>
+                         <a href="https://www.tiktok.com/@riz_m.af?_t=ZS-8vO7VeoGCGN&_r=1"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="year"></span>2025 Semua hak dilindungi. Dibuat oleh Riz_dev.</p>
+            </div>
+        </div>
+    </footer>
   
   <canvas id="techCanvas"></canvas>
 
